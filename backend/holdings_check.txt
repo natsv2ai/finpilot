@@ -1,0 +1,15 @@
+46|SUNPHARMA|SUN PHARMACEUTICAL IND L|stock
+47|ICICIBANK|ICICI BANK LTD.|stock
+49|SBILIFE|SBI LIFE INSURANCE CO LTD|stock
+44|RELIANCE|RELIANCE INDUSTRIES LTD|stock
+45|LT|LARSEN & TOUBRO LTD.|stock
+48|IDFCFIRSTB|IDFC FIRST BANK LIMITED|stock
+50|TATAPOWER|TATA POWER CO LTD|stock
+51|JIOFIN|JIO FIN SERVICES LTD|stock
+52|LAURUSLABS|LAURUS LABS LIMITED|stock
+53|PARAG PARKH FLEXI CAP FUND DIRECT GROWTH|parag parkh flexi cap fund direct growth|mutual_fund
+54|KOTAK LARGE AND MID CAP FUND DIRECT GWOTH|kotak large and mid cap fund direct gwoth|mutual_fund
+55|QUANT SMALL CAP FUND DIRECT GROWTH|quant small cap fund direct growth|mutual_fund
+56|PARAG PARKH FLEXI CAP FUND DIRECT GROWTH|parag parkh flexi cap fund direct growth|mutual_fund
+57|KOTAK LARGE AND MID CAP FUND DIRECT GWOTH|kotak large and mid cap fund direct gwoth|mutual_fund
+58|QUANT SMALL CAP FUND DIRECT GROWTH|quant small cap fund direct growth|mutual_fund
