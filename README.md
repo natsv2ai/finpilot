@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # FinPilot — AI-Powered Wealth Management Platform
 
 A full-stack personal finance platform for Indian retail investors. Consolidates portfolios across multiple brokers, provides AI-powered stock analysis, IPO insights, NSDL/CDSL depository integration, and intelligent recommendations via pluggable LLM providers.
@@ -166,10 +165,5 @@ FinPilot/
 
 ---
 
-## 📝 License
+## 📝 License MIT
 
-MIT
-=======
-# finpilot
-Personal fiancial palnning application and wealth advisor
->>>>>>> 80d78844fd3212960a1c0e54efcd2ee4aae032d2
