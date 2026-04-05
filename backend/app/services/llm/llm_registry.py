@@ -49,16 +49,6 @@ def _init_providers(config: dict | None = None):
         except ImportError:
             pass
 
-    euron_key = config.get("EURON_API_KEY", "")
-    if euron_key:
-        try:
-            from app.services.llm.euron_provider import EuronProvider
-            _PROVIDERS["euron"] = EuronProvider(
-                api_key=euron_key, 
-                base_url=config.get("EURON_URL", "")
-            )
-        except ImportError:
-            pass
 
 
 def get_provider(name: str | None = None) -> LLMBase:
@@ -100,19 +90,16 @@ def init_from_settings(settings_obj):
     config = {}
     for attr in ["OLLAMA", "OLLAMA_BASE_URL", "OLLAMA_MODEL", "HUGGINGFACE_API_KEY",
                  "OPENAI_API_KEY", "GEMINI_API_KEY", "ANTHROPIC_API_KEY", 
-                 "EURON", "EURON_API_KEY", "EURON_URL"]:
+                    "OLLAMA", "OLLAMA_BASE_URL", "OLLAMA_MODEL", "HUGGINGFACE_API_KEY",
+                    "OPENAI_API_KEY", "GEMINI_API_KEY", "ANTHROPIC_API_KEY"]:
         config[attr] = getattr(settings_obj, attr, "")
 
     _init_providers(config)
 
     global _active_provider
     # Intelligently route to premium API models if configured in .env
-    euron_override = config.get("EURON", "").lower() in ("true", "1", "yes")
-    ollama_override = config.get("OLLAMA", "").lower() in ("true", "1", "yes")
-    
-    if euron_override and "euron" in _PROVIDERS:
-        _active_provider = "euron"
-    elif ollama_override and "ollama" in _PROVIDERS:
+    ollama_override = config.get("OLLAMA", "false").lower() == "true"
+    if ollama_override and "ollama" in _PROVIDERS:
         _active_provider = "ollama"
     elif config.get("OPENAI_API_KEY") and "openai" in _PROVIDERS:
         _active_provider = "openai"

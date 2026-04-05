@@ -47,10 +47,12 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str = ""
     ANTHROPIC_API_KEY: str = ""
     HUGGINGFACE_API_KEY: str = ""
+    OLLAMA: str = "false"
+
+    # Euron API
     EURON: str = "false"
     EURON_API_KEY: str = ""
-    EURON_URL: str = "https://api.euron.one"
-    OLLAMA: str = "false"
+    EURON_URL: str = ""
 
     FRONTEND_URL: str = "http://localhost:3000"
 
